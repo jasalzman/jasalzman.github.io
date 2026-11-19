@@ -5,32 +5,65 @@ permalink: /research/
 author_profile: true
 ---
 
-{% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
-{% endif %}
+<style>
+  .entry { margin-bottom: 1.5em; }
+  .entry-title { font-weight: bold; }
+  .entry-meta { margin: 0.15em 0 0 0; font-size: 0.9em; }
+  .entry-meta.note { opacity: 0.8; }
+  .entry details { margin-top: 0.3em; font-size: 0.9em; }
+  .entry summary { cursor: pointer; font-weight: bold; }
+  .entry details p { margin: 0.4em 0 0 0; }
+</style>
 
-{% include base_path %}
+<!--
+  HOW TO ADD A PAPER: copy one block from <div class="entry"> to its closing </div>,
+  paste it in the right section, and edit the text.
+  - Delete the <details> ... </details> part if there is no abstract yet.
+  - Add links like this inside the title line:  [<a href="/files/paper.pdf">PDF</a>]
+-->
 
-<!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
-    {% endfor %}
-  {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
-{% endif %}
+<h2>Book Chapters</h2>
 
+<div class="entry">
+  <div class="entry-title">Migration, Mobility, and Political Realignments: Internal and International Migration's Effects on U.S. Politics</div>
+  <p class="entry-meta">With Clinton Willibanks and Daron Shaw</p>
+  <p class="entry-meta">Forthcoming in <i>The Handbook of American Political Geography</i>, edited by Kal Munis and Nicholas Jacobs. De Gruyter.</p>
+</div>
 
+<div class="entry">
+  <div class="entry-title">The Electoral Ecosystem</div>
+  <p class="entry-meta">With Joseph Coll and Chris Clark</p>
+  <p class="entry-meta">Forthcoming in <i>The Next Reconstruction: Race, Electoral Systems, and Democracy</i>. Oxford University Press.</p>
+</div>
 
+<h2>Working Papers</h2>
+
+<div class="entry">
+  <div class="entry-title">Disentangling Causal Mechanisms in Conjoint Experiments Using Mediation [<a href="https://arxiv.org/abs/2607.03508">arXiv</a>]</div>
+  <p class="entry-meta">With Michaël Aklin, Max Goplerud, and Nicole E. Pashley</p>
+  <details>
+    <summary>Abstract</summary>
+    <p>Conjoint experiments provide an attractive way to assess the role of multiple attributes simultaneously on decision-making. However, the randomization of multiple attributes prevents understanding the causal mechanisms that, critically, depend on the relationship between attributes -- e.g., how one attribute affects the respondent's belief as to another attribute. This is because conjoint experiments recover controlled effects whereas a substantively important estimand may be the total or indirect effect of one attribute. Unfortunately, existing experimental designs for conjoint experiments cannot estimate these effects. We provide an alternative framework that requires one additional, simple experiment to learn the relationship between attributes among respondents alongside the standard assumptions for causal mediation. Estimation of the relevant effects can be done in a doubly robust fashion using machine learning methods. We illustrate this by conducting a pre-registered experiment on candidate choice and disentangle the effect of different attributes by understanding their mediation through the candidate's party.</p>
+  </details>
+</div>
+
+<h2>Works in Progress</h2>
+
+<div class="entry">
+  <div class="entry-title">Nationalization as a Campaign Strategy and Voter Opinion</div>
+  <p class="entry-meta">Dissertation project</p>
+</div>
+
+<div class="entry">
+  <div class="entry-title">Rural Congruence with State Public Policy</div>
+</div>
+
+<div class="entry">
+  <div class="entry-title">The Opening of Local News on Voter Behavior</div>
+  <p class="entry-meta">With Michael Auslen</p>
+</div>
+
+<div class="entry">
+  <div class="entry-title">Impact of Polling Place Location on Different Geographies</div>
+  <p class="entry-meta note">Presented at the Midwest Political Science Association Annual Meeting, 2024</p>
+</div>
