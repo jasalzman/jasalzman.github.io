@@ -1,8 +1,8 @@
 ---
 title: "Disentangling Causal Mechanisms in Conjoint Experiments Using Mediation"
-collection: publications
+collection: research
 category: manuscripts
-permalink: /publication/2026-07-03-conjoint-mediation
+permalink: /research/2026-07-03-conjoint-mediation
 excerpt: 'A framework for estimating total and indirect effects in conjoint experiments, using causal mediation and one additional experiment.'
 date: 2026-07-03
 venue: 'arXiv preprint'
